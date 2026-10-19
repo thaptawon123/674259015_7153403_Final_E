@@ -11,9 +11,10 @@ const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 
 // Middleware
-const allowedOrigins = process.env.CORS_ORIGIN 
-  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()) 
-  : '*';
+let allowedOrigins = '*';
+if (process.env.CORS_ORIGIN && process.env.CORS_ORIGIN.trim() !== '*') {
+  allowedOrigins = process.env.CORS_ORIGIN.split(',').map(origin => origin.trim());
+}
 
 app.use(cors({
   origin: allowedOrigins,
