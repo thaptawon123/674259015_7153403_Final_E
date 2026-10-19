@@ -7,10 +7,17 @@ if (process.env.DATABASE_URL) {
   // Use connection string (standard on Render, Neon, Supabase, Railway)
   const isPostgres = process.env.DATABASE_URL.startsWith('postgres://') || process.env.DATABASE_URL.startsWith('postgresql://');
   
+  const isInternalRender = process.env.DATABASE_URL.includes('@dpg-') && !process.env.DATABASE_URL.includes('.render.com');
+  const enableSSL = isPostgres && (
+    process.env.DB_SSL === 'true' || 
+    process.env.DATABASE_URL.includes('sslmode=require') || 
+    (process.env.NODE_ENV === 'production' && !isInternalRender && process.env.DB_SSL !== 'false')
+  );
+
   sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: isPostgres ? 'postgres' : (process.env.DB_DIALECT || 'postgres'),
     logging: process.env.NODE_ENV === 'development' ? console.log : false,
-    dialectOptions: isPostgres && process.env.NODE_ENV === 'production' ? {
+    dialectOptions: enableSSL ? {
       ssl: {
         require: true,
         rejectUnauthorized: false
