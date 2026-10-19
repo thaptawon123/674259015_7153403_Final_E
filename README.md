@@ -307,7 +307,7 @@ npm run dev
 ## 7. ข้อมูลการนำระบบขึ้นใช้งานจริง (Production Deployment)
 
 ### 7.1 Frontend บน Vercel
-- **Production URL**: `https://674259015-7153403-final-e.vercel.app` *(หรือ URL ที่คุณได้รับจาก Vercel)*
+- **Production URL**: `https://674259015-7153403-final-e.vercel.app/` 
 - **Root Directory**: `frontend`
 - **Framework Preset**: `Vite`
 - **Build Command**: `npm run build`
@@ -316,10 +316,7 @@ npm run dev
   - `VITE_API_URL`: `https://final-e-backend-674259015.onrender.com`
 
 ### 7.2 Backend บน Render
-- **Base URL ของ API**: `https://final-e-backend-674259015.onrender.com` *(หรือ URL ที่คุณได้รับจาก Render)*
-- **Endpoint ตัวอย่างที่เปิดทดสอบได้**: 
-  - `https://final-e-backend-674259015.onrender.com/` (หน้ารูทและ Health Check)
-  - `https://final-e-backend-674259015.onrender.com/api/learning-resources` (รายการข้อมูลสื่อการเรียนรู้)
+- **Base URL ของ API**: `https://learning-resources-backend-674259015.onrender.com` 
 - **Environment**: `Node`
 - **Root Directory**: `backend`
 - **Build Command**: `npm ci`
