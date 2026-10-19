@@ -312,8 +312,6 @@ npm run dev
 - **Framework Preset**: `Vite`
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
-- **Environment Variable**:
-  - `VITE_API_URL`: `https://final-e-backend-674259015.onrender.com`
 
 ### 7.2 Backend บน Render
 - **Base URL ของ API**: `https://learning-resources-backend-674259015.onrender.com` 
@@ -334,25 +332,22 @@ npm run dev
 
 ### 8.1 หน้ารายการข้อมูลสื่อการเรียนรู้ พร้อมระบบค้นหาและกรองหมวดหมู่
 *(ใส่ภาพหน้ารายการข้อมูลที่นี่: `screenshots/01_list_and_search.png`)*
-![หน้ารายการข้อมูล](screenshots/01_list_and_search.png)
 
 ### 8.2 หน้าต่างโมดัลเพิ่มสื่อการเรียนรู้ (พร้อม Validation ครบทุกฟิลด์)
 *(ใส่ภาพหน้าต่างแบบฟอร์มเพิ่มข้อมูลที่นี่: `screenshots/02_create_modal.png`)*
-![โมดัลเพิ่มข้อมูล](screenshots/02_create_modal.png)
+
 
 ### 8.3 หน้าต่างโมดัลแก้ไขสื่อการเรียนรู้
 *(ใส่ภาพหน้าต่างแบบฟอร์มแก้ไขข้อมูลที่นี่: `screenshots/03_edit_modal.png`)*
-![โมดัลแก้ไขข้อมูล](screenshots/03_edit_modal.png)
+
 
 ### 8.4 หน้าต่างโมดัลยืนยันการลบข้อมูล (แสดงชื่อรายการก่อนลบ)
 *(ใส่ภาพหน้าต่างยืนยันการลบข้อมูลที่นี่: `screenshots/04_delete_confirm.png`)*
-![โมดัลยืนยันการลบ](screenshots/04_delete_confirm.png)
+
 
 ### 8.5 หน้าต่างโมดัลแสดงรายละเอียดครบทุกฟิลด์
 *(ใส่ภาพรายละเอียดข้อมูลที่นี่: `screenshots/05_detail_view.png`)*
-![โมดัลรายละเอียด](screenshots/05_detail_view.png)
+
 
 ### 8.6 ภาพสถานะ Deploy สำเร็จบน Vercel และ Render
 *(ใส่ภาพหน้าต่างสถานะ Deploy ของ Vercel และ Render)*
-![สถานะ Vercel](screenshots/06_vercel_deploy.png)
-![สถานะ Render](screenshots/07_render_deploy.png)
